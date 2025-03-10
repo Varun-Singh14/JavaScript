@@ -85,6 +85,8 @@ JavaScript me har object kisi na kisi **prototype** se properties aur methods in
 ### Prototype Kya Kaam Karta Hai?
 Prototype ek object ka **blueprint** hota hai. Yeh allow karta hai ki ek object par woh properties aur methods use ho sakein jo usme directly exist nahi karte.
 
+<img src="object-prototypes.png" alt="Object-Prototypes" width="600" height="200">
+
 ### Example:
 ```js
 var arr = [];
