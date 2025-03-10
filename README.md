@@ -4,7 +4,7 @@
 - [Different Data Types in JavaScript](#different-data-types-in-javascript)
 - [Hoisting in JavaScript](#hoisting-in-javascript)
 - [Debugger in JavaScript](#debugger-in-javascript)
-- [Difference between "==" and "===" Operators](#difference-between--and--operators)
+- [Difference between "==" and "===" Operators](#difference-operators)
 - [Difference between var aur let keyword in JavaScript](#difference-between-var-and-let-keyword-in-javascript)
 - [Implicit Type Coercion in JavaScript](#implicit-type-coercion-in-javascript)
 - [JavaScript Dynamically Typed Language](#javascript-dynamically-typed-language)
@@ -203,6 +203,7 @@ Agar aap browser ke developer tools (F12) me "Sources" tab me jaake debugging en
 Debugger ka use karke hum code ke errors aur bugs ko easily detect aur fix kar sakte hain. Yeh ek powerful tool hai jo development aur testing me bohot madad karta hai.
 
 
+<a id="difference-operators"></a>
 # Difference between "==" and "===" Operators in JavaScript
 Dono comparison operators hain, lekin inka use alag tareeke se hota hai. "==" sirf values ko compare karta hai, jabki "===" values ke saath-saath unke data types ko bhi check karta hai.
 
