@@ -354,3 +354,51 @@ Person { name: "Lilly", age: 17, gender: "female" }
 ### Conclusion:
 Constructor functions **JavaScript me objects create karne ka ek powerful tarika hai** jo code ko **modular aur reusable** banata hai. **Agar aapko ek jaise multiple objects chahiye, toh constructor function best choice hai!**
 
+
+# DOM (Document Object Model)
+DOM ka full form **Document Object Model** hai. Yeh ek **programming interface** hai jo HTML aur XML documents ke liye use hota hai.
+
+Jab browser ek HTML document ko render karta hai, tab yeh ek **object-based structure** create karta hai jise **DOM** kehte hain. Iska use karke hum HTML document ke elements ko dynamically manipulate kar sakte hain.
+
+### DOM Kaise Kaam Karta Hai?
+1. Jab ek web page load hota hai, **browser HTML code ko parse karta hai**.
+2. Fir ek **DOM tree** generate hoti hai jo **HTML elements ka ek structured representation** hoti hai.
+3. JavaScript ka use karke hum **DOM ke elements ko modify ya manipulate** kar sakte hain.
+
+### Example: Conversion of HTML code to DOM
+
+#### HTML Code:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1>Welcome to DOM</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+```
+
+#### DOM Structure (Graphical Representation):
+
+![DOM Structure](![graphical representation of DOM text](dom.png))
+
+### DOM Manipulation Example:
+Hum JavaScript ka use karke DOM elements ko dynamically modify kar sakte hain.
+
+```js
+document.querySelector("h1").innerText = "DOM Manipulated!";
+```
+
+**Output:** Page ka `<h1>` tag update ho jayega aur "DOM Manipulated!" show karega.
+
+### Advantages of DOM:
+**Dynamic changes:** JavaScript ke through HTML elements ko **modify kar sakte hain**.
+**Event Handling:** Click, hover, input jaise **events handle karne ke liye** DOM ka use hota hai.
+**Real-time Updates:** DOM ki madad se **live content update** ho sakta hai bina page reload kiye.
+
+### Conclusion:
+DOM ek **powerful concept hai jo web development me dynamic changes aur interaction ke liye use hota hai**. JavaScript ki madad se hum **DOM elements ko modify, delete, ya update** kar sakte hain jo **interactive web pages** banane me madad karta hai. 
+
