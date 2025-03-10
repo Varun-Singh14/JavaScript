@@ -348,7 +348,7 @@ Person { name: "Lilly", age: 17, gender: "female" }
 - **Object-oriented programming (OOP) ka ek important concept hai**, jo code ko **organized aur scalable** banata hai.
 
 #### Disadvantages:
-- **Agar `new` keyword bhool gaye toh function normal tarike se execute hoga aur global scope me variables create ho sakte hain.**
+- Agar `new` keyword bhool gaye toh function normal tarike se execute hoga aur global scope me variables create ho sakte hain.
 - **Har object ke liye naye methods create hote hain**, jo memory inefficient ho sakta hai (Iska solution prototype use karna hai).
 
 ### Conclusion:
