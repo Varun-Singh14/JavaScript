@@ -176,3 +176,62 @@ console.log(add(5, 3)); // Output: 2 (Jo ki galat hai, expected 8 tha)
 
 Agar aapko JavaScript me coding karte waqt error aaye toh error message ko **dhyan se padho** aur debugging tools ka use karo!
 
+
+# Memoization
+
+### Memoization Kya Hota Hai?
+Memoization ek **caching technique** hai jisme **function ka return value uske parameters ke basis par cache kiya jata hai**. Agar function **same parameters ke saath dobara call hota hai**, toh **computed result dobara calculate nahi hota, balki cache se return hota hai**.
+
+Yeh concept **expensive function calls** ke liye kaafi useful hota hai kyunki yeh **execution time ko optimize** karta hai.
+
+### Simple Function Example:
+```js
+function addTo256(num){
+    return num + 256;
+}
+console.log(addTo256(20)); // Output: 276
+console.log(addTo256(40)); // Output: 296
+console.log(addTo256(20)); // Output: 276 (dobara calculate ho raha hai)
+```
+
+#### Problem:
+- Jab hum **same parameter** ke saath function dobara call karte hain, toh **result dubara compute hota hai**.
+- Chhoti functions ke liye koi dikkat nahi, lekin agar **function heavy computation kare**, toh ye **time waste karega**.
+
+##### Memoized Function Example:
+```js
+function memoizedAddTo256(){
+    var cache = {}; // Cache store karne ke liye object
+    return function(num){
+        if(num in cache){
+            console.log("cached value");
+            return cache[num];
+        } else {
+            cache[num] = num + 256;
+            return cache[num];
+        }
+    }
+}
+
+var memoizedFunc = memoizedAddTo256();
+console.log(memoizedFunc(20)); // Normal return: 276
+console.log(memoizedFunc(20)); // Cached return: 276
+```
+
+#### Solution:
+- **Cache object** store karta hai **pehle se computed results**.
+- Jab **same input dobara aata hai**, toh **cache se result return hota hai** instead of re-calculating.
+
+### Memoization Ke Advantages Aur Disadvantages:
+#### Advantages:
+- **Execution fast hoti hai**, kyunki **dobara calculation avoid hota hai**.
+- **Expensive function calls ka time save hota hai**.
+- **Performance optimize hoti hai**, especially jab **large computations ya recursive functions ho**.
+
+#### Disadvantages:
+- **Memory zyada consume hoti hai**, kyunki **computed results ko store karna padta hai**.
+- **Har case me useful nahi hota**, agar function ka output frequently change hota hai toh caching ka fayda nahi hoga.
+
+### Conclusion:
+Memoization **JavaScript me performance optimization ka ek powerful concept hai** jo **repeated function calls ko fast banata hai**. Lekin iska **sahi use case samajhna zaroori hai**, taki **memory aur speed ke beech balance maintain kiya ja sake**. 
+
