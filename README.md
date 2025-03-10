@@ -60,7 +60,7 @@ This ability of a function to store a variable for further reference even after 
 
 
 
-## Object Prototypes
+# Object Prototypes
 JavaScript me har object kisi na kisi **prototype** se properties aur methods inherit karta hai. Matlab, objects apne prototype se features lete hain aur unhe use karte hain.
 
 #### Kuch Examples:
