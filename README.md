@@ -1,6 +1,6 @@
 # JavaScript
 
-## Closures:
+# Closures:
 Closures ka matlab yeh hota hai ki ek function apne outer scope ke variables aur functions ko yaad rakh sakta hai, chahe woh function execute hone ke baad bhi use kare. Matlab, function apne surrounding environment ka reference hold karke rakhta hai.
 
 Agar hum example dekhein:
@@ -63,7 +63,7 @@ This ability of a function to store a variable for further reference even after 
 # Object Prototypes
 JavaScript me har object kisi na kisi **prototype** se properties aur methods inherit karta hai. Matlab, objects apne prototype se features lete hain aur unhe use karte hain.
 
-#### Kuch Examples:
+### Kuch Examples:
 - **Date objects** → `Date.prototype` se properties inherit karte hain.
 - **Math objects** → `Math.prototype` se properties inherit karte hain.
 - **Array objects** → `Array.prototype` se properties inherit karte hain.
