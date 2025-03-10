@@ -395,9 +395,9 @@ document.querySelector("h1").innerText = "DOM Manipulated!";
 **Output:** Page ka `<h1>` tag update ho jayega aur "DOM Manipulated!" show karega.
 
 ### Advantages of DOM:
-**Dynamic changes:** JavaScript ke through HTML elements ko **modify kar sakte hain**.
-**Event Handling:** Click, hover, input jaise **events handle karne ke liye** DOM ka use hota hai.
-**Real-time Updates:** DOM ki madad se **live content update** ho sakta hai bina page reload kiye.
+- **Dynamic changes:** JavaScript ke through HTML elements ko **modify kar sakte hain**.
+- **Event Handling:** Click, hover, input jaise **events handle karne ke liye** DOM ka use hota hai.
+- **Real-time Updates:** DOM ki madad se **live content update** ho sakta hai bina page reload kiye.
 
 ### Conclusion:
 DOM ek **powerful concept hai jo web development me dynamic changes aur interaction ke liye use hota hai**. JavaScript ki madad se hum **DOM elements ko modify, delete, ya update** kar sakte hain jo **interactive web pages** banane me madad karta hai. 
