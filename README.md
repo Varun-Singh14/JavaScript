@@ -4,7 +4,7 @@
 - [Closures](#closures)
 - [Object Prototypes](#object-prototypes)
 - [Callbacks](#callbacks)
-- [Errors in JavaScript](#errors-in-js)
+- [Errors in JavaScript](#errors-in-javascript)
 - [Memoization](#memoization)
 - [Recursion](#recursion)
 - [Constructor Function](#constructor-function)
