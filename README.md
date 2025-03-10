@@ -402,3 +402,151 @@ document.querySelector("h1").innerText = "DOM Manipulated!";
 ### Conclusion:
 DOM ek **powerful concept hai jo web development me dynamic changes aur interaction ke liye use hota hai**. JavaScript ki madad se hum **DOM elements ko modify, delete, ya update** kar sakte hain jo **interactive web pages** banane me madad karta hai. 
 
+# charAt() Method in JavaScript
+JavaScript me **charAt()** ek built-in method hai jo **string ke kisi bhi index par maujood character ko return karta hai**. Iska index **0 se shuru hota hai** aur **n-1 tak hota hai**, jisme `n` string ka length hai.
+
+### Syntax:
+```js
+string.charAt(index)
+```
+
+- **index**: Yeh ek number hai jo batata hai ki kaunsa character return karna hai.
+
+- **Return Value**: Agar index valid hai toh corresponding character return hota hai, nahi toh empty string `""` return hoti hai.
+
+### Example:
+```js
+let str = "JavaScript";
+console.log(str.charAt(0)); // Output: 'J'
+console.log(str.charAt(4)); // Output: 'S'
+console.log(str.charAt(10)); // Output: '' (empty string)
+```
+
+### Important Points:
+- **Index 0-based hota hai** (matlab pehla character index `0` par hota hai).
+- **Agar index string ki length se zyada ho, toh empty string return hoti hai**.
+- **charAt() method case-sensitive hoti hai**.
+
+### Alternative:
+Agar hume direct indexing se character retrieve karna ho, toh hum **bracket notation (`[]`)** ka bhi use kar sakte hain:
+```js
+console.log(str[0]); // Output: 'J'
+console.log(str[4]); // Output: 'S'
+```
+Lekin, agar invalid index diya jaye toh `undefined` return hoga.
+
+### Conclusion:
+JavaScript ka `charAt()` method ek simple tarika hai kisi **specific position** par maujood **character ko retrieve karne ke liye**. Agar index range me nahi hai toh **empty string return hoti hai**.
+
+
+
+# BOM (Browser Object Model) in JavaScript
+BOM ka full form **Browser Object Model** hota hai. Yeh ek JavaScript ka feature hai jo **browser ke sath interact karne** ki facility deta hai.
+
+BOM ka **sabse main object `window` hota hai**, jisme browser ke different functionalities ko access karne ke liye multiple properties aur methods hote hain.
+
+### BOM ke Important Objects
+
+#### 1. `window` Object
+🔹 Browser ka **sabse root object** hota hai.
+🔹 Saare browser-related objects aur methods iske andar aate hain.
+
+**Example:**
+```js
+console.log(window.innerHeight); // Window ka height print karega
+console.log(window.innerWidth);  // Window ka width print karega
+```
+
+#### 2. `document` Object
+🔹 Iska use **HTML document ko access aur modify karne ke liye** hota hai.
+
+**Example:**
+```js
+document.title = "New Page Title"; // Webpage ka title change karega
+```
+
+#### 3. `history` Object
+🔹 Yeh **browser history** ko control karne ke liye use hota hai.
+
+**Example:**
+```js
+history.back(); // Ek page piche jayega
+history.forward(); // Ek page aage jayega
+```
+
+#### 4. `navigator` Object
+🔹 Iska use **browser aur user ke system ke baare me information** retrieve karne ke liye hota hai.
+
+**Example:**
+```js
+console.log(navigator.userAgent); // Browser ka info dikhayega
+console.log(navigator.language); // User ka preferred language dikhayega
+```
+
+#### 5. `location` Object
+🔹 Iska use **current URL ke baare me information lene aur usko change karne ke liye** hota hai.
+
+**Example:**
+```js
+console.log(location.href); // Current page ka URL dikhayega
+location.href = "https://www.google.com"; // Page ko Google par redirect karega
+```
+
+### Conclusion:
+BOM ek **powerful feature** hai jo **browser ke different aspects ko control** karne me madad karta hai. Iska main object `window` hota hai jisme **document, history, navigator, location, screen** jaise objects hote hain jo alag-alag browser functionalities ko control karne me madad karte hain.
+
+
+# Client-Side vs Server-Side JavaScript
+
+### Client-Side JavaScript
+- Client-side JavaScript ka use **browser ke andar** hota hai.
+- Yeh **HTML pages ke andar** likha jata hai aur browser isse **directly execute** karta hai.
+- Isme **UI manipulation, form validation, animations, API requests** jaise kaam kiye ja sakte hain.
+
+#### Example:
+```js
+// Button click par alert show karne wala client-side JavaScript code
+function showAlert() {
+    alert("Hello, this is Client-Side JavaScript!");
+}
+```
+
+#### Famous Client-Side Frameworks/Libraries:
+- React.js
+- Angular
+- Vue.js
+
+### Server-Side JavaScript
+- Server-side JavaScript ka use **backend logic aur database handling** ke liye hota hai.
+- Yeh **directly browser me execute nahi hota**, balki **server par run hota hai** aur client ko response bhejta hai.
+- Server-side JavaScript **Node.js** ka use karke likha jata hai.
+
+#### Example:
+```js
+// Simple Node.js server jo ek message return karega
+const http = require('http');
+http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello from Server-Side JavaScript!');
+}).listen(3000);
+```
+
+#### Famous Server-Side Frameworks:
+- Node.js
+- Express.js
+- Nest.js
+
+<img src="clientVSServer.jpg" alt="client-vs-server-comparison-chart" width="600" height="300">
+
+### Client-Side vs Server-Side JavaScript Comparison
+| Feature | Client-Side JavaScript | Server-Side JavaScript |
+|---------|----------------------|----------------------|
+| Execution | Browser ke andar | Server par |
+| Speed | Fast (local execution) | Relatively slow (server processing) |
+| Security | Less secure | More secure |
+| Use Case | UI Manipulation, Form Validation | Database Handling, API Development |
+
+### Conclusion
+Client-side JavaScript **browser me execute hota hai** aur mainly **UI aur interactivity** handle karta hai, jabki Server-side JavaScript **server me execute hota hai** aur **data processing, authentication, aur database operations** handle karta hai.
+
+Dono milke **full-stack development** ka part bante hain.
