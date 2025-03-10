@@ -11,7 +11,7 @@
 - [DOM (Document Object Model)](#dom-document-object-model)
 - [charAt() Method in JavaScript](#charat-method-in-javascript)
 - [BOM (Browser Object Model)](#bom-browser-object-model)
-- [Client-Side vs Server-Side](#client-side-vs-server-side-javascript)
+- [Client-Side vs Server-Side](#client-side-vs-server-side)
 
 # Closures
 Closures ka matlab yeh hota hai ki ek function apne outer scope ke variables aur functions ko yaad rakh sakta hai, chahe woh function execute hone ke baad bhi use kare. Matlab, function apne surrounding environment ka reference hold karke rakhta hai.
