@@ -1,7 +1,7 @@
 # JavaScript
 
 # Contents
-- [Closure](#closure)
+- [Closures](#closures)
 - [Object Prototypes](#object-prototypes)
 - [Callbacks](#callbacks)
 - [Errors in JavaScript](#errors-in-js)
