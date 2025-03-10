@@ -92,3 +92,52 @@ Agar ek property ya method **current object** me nahi milti, toh JavaScript engi
 ### Conclusion:
 Prototype system ki wajah se hum JavaScript objects ko **reusable** bana sakte hain aur **inheritance** implement kar sakte hain. Agar koi method ya property directly object me na ho, toh JavaScript uske prototype me automatically check karti hai.
 
+
+# Callbacks
+JavaScript me **callback ek function hota hai jo tab execute hota hai jab dusra function execute ho chuka ho**. JavaScript me functions **first-class citizens** hote hain, iska matlab:
+- Functions ko ek argument ki tarah pass kiya ja sakta hai.
+- Functions ko return bhi kiya ja sakta hai.
+- Functions ko ek object ki property ke roop me bhi use kiya ja sakta hai.
+
+Jab ek function ko dusre function ke argument ki tarah diya jata hai, usse **callback function** kehte hain.
+
+### Example:
+```js
+function divideByHalf(sum){
+    console.log(Math.floor(sum / 2));
+}
+function multiplyBy2(sum){
+    console.log(sum * 2);
+}
+function operationOnSum(num1, num2, operation){
+    var sum = num1 + num2;
+    operation(sum);
+}
+
+operationOnSum(3, 3, divideByHalf); // Output: 3
+operationOnSum(5, 5, multiplyBy2); // Output: 20
+```
+
+#### Is Code Ka Explanation:
+- `operationOnSum` function **3 arguments** leta hai → `num1`, `num2`, aur ek **operation (callback function)**
+- `num1` aur `num2` ka sum nikalta hai.
+- Fir callback function (`operation`) ko call karta hai jo `sum` par operation apply karta hai.
+- `divideByHalf` aur `multiplyBy2` dono **callback functions** hain.
+
+#### Callback Function Kaise Kaam Karta Hai?
+1. Jab `operationOnSum(3, 3, divideByHalf);` call hota hai:
+   - `sum = 3 + 3 = 6`
+   - `divideByHalf(6)` call hota hai → Output: `3`
+
+2. Jab `operationOnSum(5, 5, multiplyBy2);` call hota hai:
+   - `sum = 5 + 5 = 10`
+   - `multiplyBy2(10)` call hota hai → Output: `20`
+
+### Conclusion:
+Callback function ek **important concept** hai jo asynchronous programming me kaafi useful hota hai, jaise ki:
+- Event handling
+- API calls
+- Timers (`setTimeout`, `setInterval`)
+
+Yeh mechanism ensure karta hai ki ek function dusre function ke execute hone ke baad hi chale, jo JavaScript me **non-blocking execution** ke liye kaafi important hai! 🚀
+
