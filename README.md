@@ -59,7 +59,7 @@ Closure ki wajah se ek function apne outer scope ke variables ko yaad rakh sakta
 This ability of a function to store a variable for further reference even after it is executed is called **Closure**.
 
 
-##
+
 ## Object Prototypes
 JavaScript me har object kisi na kisi **prototype** se properties aur methods inherit karta hai. Matlab, objects apne prototype se features lete hain aur unhe use karte hain.
 
