@@ -156,8 +156,6 @@ console.log('Hello World) // Missing closing quote
 ```
 **Error:** `Uncaught SyntaxError: missing ) after argument list`
 
----
-
 ### 2. Logical Error
 - Jab **code ka syntax sahi hota hai** lekin **logic galat hota hai**, toh **logical error** aata hai.
 - Is type ke errors me **koi error message nahi milta**, lekin output **galat aata hai**.
