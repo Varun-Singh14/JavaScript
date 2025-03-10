@@ -58,3 +58,37 @@ Closure ki wajah se ek function apne outer scope ke variables ko yaad rakh sakta
 
 This ability of a function to store a variable for further reference even after it is executed is called **Closure**.
 
+# Object Prototypes
+
+## Object Prototypes Kya Hote Hain?
+JavaScript me har object kisi na kisi **prototype** se properties aur methods inherit karta hai. Matlab, objects apne prototype se features lete hain aur unhe use karte hain.
+
+### Kuch Examples:
+- **Date objects** → `Date.prototype` se properties inherit karte hain.
+- **Math objects** → `Math.prototype` se properties inherit karte hain.
+- **Array objects** → `Array.prototype` se properties inherit karte hain.
+- **Sabse upar** `Object.prototype` hota hai, jisse har prototype properties aur methods inherit karta hai.
+
+## Prototype Kya Kaam Karta Hai?
+Prototype ek object ka **blueprint** hota hai. Yeh allow karta hai ki ek object par woh properties aur methods use ho sakein jo usme directly exist nahi karte.
+
+## Example:
+```js
+var arr = [];
+arr.push(2);
+console.log(arr); // Output: [2]
+```
+
+### Yeh Kaise Work Karta Hai?
+- Yahan `arr` ek empty array hai.
+- Humne `arr.push(2)` use kiya, lekin `push` method humne khud define nahi ki.
+- JavaScript engine sabse pehle check karega ki `push` method `arr` object ke andar hai ya nahi.
+- Jab `push` method `arr` me nahi mila, toh engine `Array.prototype` me check karega.
+- `Array.prototype` me `push` method mil gaya, toh woh execute ho jayega.
+
+## Prototype Chain:
+Agar ek property ya method **current object** me nahi milti, toh JavaScript engine **uske prototype** me check karega. Agar wahan bhi nahi mili, toh **us prototype ke prototype** me check karega. Yeh process tab tak chalega jab tak `Object.prototype` tak nahi pahunch jata.
+
+## Conclusion:
+Prototype system ki wajah se hum JavaScript objects ko **reusable** bana sakte hain aur **inheritance** implement kar sakte hain. Agar koi method ya property directly object me na ho, toh JavaScript uske prototype me automatically check karti hai.
+
