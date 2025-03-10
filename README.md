@@ -1,6 +1,19 @@
 # JavaScript
 
-# Closures:
+# Contents
+- [Closure](#closure)
+- [Object Prototypes](#object-prototypes)
+- [Callbacks](#callbacks)
+- [Errors in JavaScript](#errors-in-js)
+- [Memoization](#memoization)
+- [Recursion](#recursion)
+- [Constructor Function](#constructor-function)
+- [DOM (Document Object Model)](#dom-document-object-model)
+- [charAt() Method in JavaScript](#charat-method-in-javascript)
+- [BOM (Browser Object Model)](#bom-browser-object-model)
+- [Client-Side vs Server-Side](#client-side-vs-server-side-javascript)
+
+# Closures
 Closures ka matlab yeh hota hai ki ek function apne outer scope ke variables aur functions ko yaad rakh sakta hai, chahe woh function execute hone ke baad bhi use kare. Matlab, function apne surrounding environment ka reference hold karke rakhta hai.
 
 Agar hum example dekhein:
@@ -440,7 +453,7 @@ JavaScript ka `charAt()` method ek simple tarika hai kisi **specific position** 
 
 
 
-# BOM (Browser Object Model) in JavaScript
+# BOM (Browser Object Model)
 BOM ka full form **Browser Object Model** hota hai. Yeh ek JavaScript ka feature hai jo **browser ke sath interact karne** ki facility deta hai.
 
 BOM ka **sabse main object `window` hota hai**, jisme browser ke different functionalities ko access karne ke liye multiple properties aur methods hote hain.
@@ -496,18 +509,18 @@ location.href = "https://www.google.com"; // Page ko Google par redirect karega
 BOM ek **powerful feature** hai jo **browser ke different aspects ko control** karne me madad karta hai. Iska main object `window` hota hai jisme **document, history, navigator, location, screen** jaise objects hote hain jo alag-alag browser functionalities ko control karne me madad karte hain.
 
 
-# Client-Side vs Server-Side JavaScript
+# Client-Side vs Server-Side
 
-### Client-Side JavaScript
-- Client-side JavaScript ka use **browser ke andar** hota hai.
+### Client-Side
+- Client-side ka use **browser ke andar** hota hai.
 - Yeh **HTML pages ke andar** likha jata hai aur browser isse **directly execute** karta hai.
 - Isme **UI manipulation, form validation, animations, API requests** jaise kaam kiye ja sakte hain.
 
 #### Example:
 ```js
-// Button click par alert show karne wala client-side JavaScript code
+// Button click par alert show karne wala client-side code
 function showAlert() {
-    alert("Hello, this is Client-Side JavaScript!");
+    alert("Hello, this is Client-Side!");
 }
 ```
 
@@ -516,10 +529,10 @@ function showAlert() {
 - Angular
 - Vue.js
 
-### Server-Side JavaScript
-- Server-side JavaScript ka use **backend logic aur database handling** ke liye hota hai.
+### Server-Side
+- Server-side ka use **backend logic aur database handling** ke liye hota hai.
 - Yeh **directly browser me execute nahi hota**, balki **server par run hota hai** aur client ko response bhejta hai.
-- Server-side JavaScript **Node.js** ka use karke likha jata hai.
+- Server-side **Node.js** ka use karke likha jata hai.
 
 #### Example:
 ```js
@@ -527,7 +540,7 @@ function showAlert() {
 const http = require('http');
 http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello from Server-Side JavaScript!');
+    res.end('Hello from Server-Side!');
 }).listen(3000);
 ```
 
@@ -538,8 +551,8 @@ http.createServer((req, res) => {
 
 <img src="clientVSServer.jpg" alt="client-vs-server-comparison-chart" width="600" height="300">
 
-### Client-Side vs Server-Side JavaScript Comparison
-| Feature | Client-Side JavaScript | Server-Side JavaScript |
+### Client-Side vs Server-Side Comparison
+| Feature | Client-Side | Server-Side |
 |---------|----------------------|----------------------|
 | Execution | Browser ke andar | Server par |
 | Speed | Fast (local execution) | Relatively slow (server processing) |
@@ -547,6 +560,6 @@ http.createServer((req, res) => {
 | Use Case | UI Manipulation, Form Validation | Database Handling, API Development |
 
 ### Conclusion
-Client-side JavaScript **browser me execute hota hai** aur mainly **UI aur interactivity** handle karta hai, jabki Server-side JavaScript **server me execute hota hai** aur **data processing, authentication, aur database operations** handle karta hai.
+Client-side **browser me execute hota hai** aur mainly **UI aur interactivity** handle karta hai, jabki Server-side **server me execute hota hai** aur **data processing, authentication, aur database operations** handle karta hai.
 
 Dono milke **full-stack development** ka part bante hain.
