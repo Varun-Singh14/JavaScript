@@ -178,8 +178,6 @@ Agar aapko JavaScript me coding karte waqt error aaye toh error message ko **dhy
 
 
 # Memoization
-
-### Memoization Kya Hota Hai?
 Memoization ek **caching technique** hai jisme **function ka return value uske parameters ke basis par cache kiya jata hai**. Agar function **same parameters ke saath dobara call hota hai**, toh **computed result dobara calculate nahi hota, balki cache se return hota hai**.
 
 Yeh concept **expensive function calls** ke liye kaafi useful hota hai kyunki yeh **execution time ko optimize** karta hai.
