@@ -171,8 +171,6 @@ function add(a, b) {
 console.log(add(5, 3)); // Output: 2 (Jo ki galat hai, expected 8 tha)
 ```
 
----
-
 ### Conclusion
 - **Syntax Errors** ko JavaScript **detect aur report** karta hai, isliye inhe fix karna **asan** hota hai.
 - **Logical Errors** me koi warning nahi milti, isliye debugging **mushkil** hoti hai.
