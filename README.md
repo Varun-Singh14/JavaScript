@@ -293,3 +293,64 @@ Final Output: 99 + 9 + 8 + 7 = 123
 ### Conclusion:
 Recursion **JavaScript me ek powerful concept hai** jo problems ko **simplify aur optimize** karne me madad karta hai. Lekin iska **sahi implementation** zaroori hai taki **performance aur memory issues na aaye**.
 
+
+
+# Constructor Function
+JavaScript me **constructor functions ka use objects banane ke liye hota hai**. Jab hume **multiple objects create karne hote hain jisme same properties aur methods hote hain**, tab hum constructor function ka use karte hain.
+
+### Kab Use Karte Hain?
+- Jab **multiple objects create karne ho jisme same type ke properties aur methods ho**.
+- Jab **manual tarike se har baar naye object create karna inefficient ho**.
+
+#### Note:
+- **Constructor function ka naam Pascal Notation me likhna chahiye** (Har word capital letter se start hona chahiye).
+
+### Example: Constructor Function
+```js
+function Person(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+}
+
+var person1 = new Person("Vivek", 76, "male");
+console.log(person1);
+
+var person2 = new Person("Courtney", 34, "female");
+console.log(person2);
+```
+
+### Output:
+```js
+Person { name: "Vivek", age: 76, gender: "male" }
+Person { name: "Courtney", age: 34, gender: "female" }
+```
+
+### Kaise Kaam Karta Hai?
+1. **Person ek constructor function hai**, jo name, age, aur gender properties ko set karta hai.
+2. Jab **new keyword ke sath Person function ko call karte hain**, ek naya object create hota hai.
+3. Har baar jab naya object create hota hai, usme **same structure aur properties hoti hain**.
+
+#### Ek Aur Object Create Karna
+```js
+var person3 = new Person("Lilly", 17, "female");
+console.log(person3);
+```
+**Output:**
+```js
+Person { name: "Lilly", age: 17, gender: "female" }
+```
+
+### Constructor Functions Ke Advantages aur Disadvantages:
+#### Advantages:
+- **Code reuse hota hai**, har baar manually object create karne ki zaroorat nahi.
+- **Multiple objects easily create kar sakte hain** jo similar properties aur methods share karte hain.
+- **Object-oriented programming (OOP) ka ek important concept hai**, jo code ko **organized aur scalable** banata hai.
+
+#### Disadvantages:
+- **Agar `new` keyword bhool gaye toh function normal tarike se execute hoga aur global scope me variables create ho sakte hain.**
+- **Har object ke liye naye methods create hote hain**, jo memory inefficient ho sakta hai (Iska solution prototype use karna hai).
+
+### Conclusion:
+Constructor functions **JavaScript me objects create karne ka ek powerful tarika hai** jo code ko **modular aur reusable** banata hai. **Agar aapko ek jaise multiple objects chahiye, toh constructor function best choice hai!**
+
