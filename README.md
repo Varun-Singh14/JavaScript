@@ -233,3 +233,63 @@ console.log(memoizedFunc(20)); // Cached return: 276
 ### Conclusion:
 Memoization **JavaScript me performance optimization ka ek powerful concept hai** jo **repeated function calls ko fast banata hai**. Lekin iska **sahi use case samajhna zaroori hai**, taki **memory aur speed ke beech balance maintain kiya ja sake**. 
 
+
+# Recursion
+Recursion ek **technique hai jisme ek function khud ko dobara call karta hai** jab tak ek base condition **satisfy** na ho jaye. Yeh tarika **iteration ka ek alternative** hai jo complex problems ko **simplify** karne me madad karta hai.
+
+### Example: Simple Recursive Function
+```js
+function add(number) {
+    if (number <= 0) {
+        return 0; // Base condition
+    } else {
+        return number + add(number - 1); // Recursive call
+    }
+}
+console.log(add(3));
+```
+#### Execution Flow:
+```js
+add(3)  =>  3 + add(2)
+              2 + add(1)
+                  1 + add(0)
+                      0
+Final Output: 3 + 2 + 1 + 0 = 6
+```
+
+Yahan, **function bar-bar khud ko call karta hai jab tak number 0 na ho jaye**. Jab **base condition satisfy hoti hai (number <= 0)**, tab recursion ruk jata hai.
+
+### Example: Recursive Function to Compute Sum of an Array
+```js
+function computeSum(arr){
+    if(arr.length === 1){
+        return arr[0]; // Base condition
+    } else {
+        return arr.pop() + computeSum(arr); // Recursive call
+    }
+}
+console.log(computeSum([7, 8, 9, 99])); // Output: 123
+```
+#### Execution Flow:
+```js
+computeSum([7, 8, 9, 99])  =>  99 + computeSum([7, 8, 9])
+                                    9 + computeSum([7, 8])
+                                        8 + computeSum([7])
+                                            7 (Base case reached)
+Final Output: 99 + 9 + 8 + 7 = 123
+```
+
+### Recursion Ke Advantages Aur Disadvantages:
+#### Advantages:
+- **Complex problems ko chhoti problems me todta hai**, jisse code **zyada readable** hota hai.
+- **Loop ki zaroorat nahi padti**, jo code ko **concise** banata hai.
+- **Tree structure ya factorial, Fibonacci jaise problems** ke liye recursion kaafi useful hota hai.
+
+#### Disadvantages:
+- **Zyada recursive calls se stack overflow ho sakta hai**, jo program **crash** kar sakta hai.
+- **Memory consumption badh sakti hai**, kyunki **har recursive call ke liye stack me ek naya frame banta hai**.
+- **Agar base condition galat ho ya missing ho**, toh **infinite recursion ho sakta hai**.
+
+### Conclusion:
+Recursion **JavaScript me ek powerful concept hai** jo problems ko **simplify aur optimize** karne me madad karta hai. Lekin iska **sahi implementation** zaroori hai taki **performance aur memory issues na aaye**. 🚀
+
