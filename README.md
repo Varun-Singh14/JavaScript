@@ -540,7 +540,7 @@ Agar strict mode enable hota hai, to bina `var`, `let`, ya `const` ke variable d
 - Accidental global variables create hone se bachata hai.
 - Safer aur maintainable code likhne me madad karta hai.
 
-Strict mode ka use karna ek achhi practice hai, especially jab aap production-level JavaScript likh rahe ho! 🚀
+Strict mode ka use karna ek achhi practice hai, especially jab aap production-level JavaScript likh rahe ho!
 
 
 # Higher Order Functions in JavaScript
