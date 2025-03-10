@@ -383,7 +383,7 @@ Jab browser ek HTML document ko render karta hai, tab yeh ek **object-based stru
 
 #### DOM Structure (Graphical Representation):
 
-![DOM Structure](![graphical representation of DOM text](dom.png))
+![graphical representation of DOM text](dom.png)
 
 ### DOM Manipulation Example:
 Hum JavaScript ka use karke DOM elements ko dynamically modify kar sakte hain.
