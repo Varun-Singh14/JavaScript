@@ -139,5 +139,44 @@ Callback function ek **important concept** hai jo asynchronous programming me ka
 - API calls
 - Timers (`setTimeout`, `setInterval`)
 
-Yeh mechanism ensure karta hai ki ek function dusre function ke execute hone ke baad hi chale, jo JavaScript me **non-blocking execution** ke liye kaafi important hai! 🚀
+Yeh mechanism ensure karta hai ki ek function dusre function ke execute hone ke baad hi chale, jo JavaScript me **non-blocking execution** ke liye kaafi important hai!
+
+
+# Errors in JavaScript
+JavaScript me errors **do tarike ke hote hain:**
+
+### 1. Syntax Error
+- Jab hum code likhte waqt **galat syntax** use karte hain ya koi **spelling mistake** hoti hai, tab **syntax error** aata hai.
+- Is wajah se program **execute nahi hota** ya beech me **ruk jata hai**.
+- JavaScript ek **error message** bhi deta hai jo batata hai ki problem kaha hai.
+
+#### Example:
+```js
+console.log('Hello World) // Missing closing quote
+```
+**Error:** `Uncaught SyntaxError: missing ) after argument list`
+
+---
+
+### 2. Logical Error
+- Jab **code ka syntax sahi hota hai** lekin **logic galat hota hai**, toh **logical error** aata hai.
+- Is type ke errors me **koi error message nahi milta**, lekin output **galat aata hai**.
+- Yeh **debug karna mushkil hota hai** kyunki program bina error ke chal jata hai, par sahi result nahi deta.
+
+#### Example:
+```js
+function add(a, b) {
+    return a - b; // Galti se '-' use kar diya '+' ki jagah
+}
+console.log(add(5, 3)); // Output: 2 (Jo ki galat hai, expected 8 tha)
+```
+
+---
+
+### Conclusion
+- **Syntax Errors** ko JavaScript **detect aur report** karta hai, isliye inhe fix karna **asan** hota hai.
+- **Logical Errors** me koi warning nahi milti, isliye debugging **mushkil** hoti hai.
+- Logical errors ko fix karne ke liye **console.log()** aur **debugging tools** ka use karna zaroori hota hai.
+
+Agar aapko JavaScript me coding karte waqt error aaye toh error message ko **dhyan se padho** aur debugging tools ka use karo!
 
