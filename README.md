@@ -448,8 +448,8 @@ BOM ka **sabse main object `window` hota hai**, jisme browser ke different funct
 ### BOM ke Important Objects
 
 #### 1. `window` Object
-🔹 Browser ka **sabse root object** hota hai.
-🔹 Saare browser-related objects aur methods iske andar aate hain.
+- Browser ka **sabse root object** hota hai.
+- Saare browser-related objects aur methods iske andar aate hain.
 
 **Example:**
 ```js
@@ -458,7 +458,7 @@ console.log(window.innerWidth);  // Window ka width print karega
 ```
 
 #### 2. `document` Object
-🔹 Iska use **HTML document ko access aur modify karne ke liye** hota hai.
+- Iska use **HTML document ko access aur modify karne ke liye** hota hai.
 
 **Example:**
 ```js
@@ -466,7 +466,7 @@ document.title = "New Page Title"; // Webpage ka title change karega
 ```
 
 #### 3. `history` Object
-🔹 Yeh **browser history** ko control karne ke liye use hota hai.
+- Yeh **browser history** ko control karne ke liye use hota hai.
 
 **Example:**
 ```js
@@ -475,7 +475,7 @@ history.forward(); // Ek page aage jayega
 ```
 
 #### 4. `navigator` Object
-🔹 Iska use **browser aur user ke system ke baare me information** retrieve karne ke liye hota hai.
+- Iska use **browser aur user ke system ke baare me information** retrieve karne ke liye hota hai.
 
 **Example:**
 ```js
@@ -484,7 +484,7 @@ console.log(navigator.language); // User ka preferred language dikhayega
 ```
 
 #### 5. `location` Object
-🔹 Iska use **current URL ke baare me information lene aur usko change karne ke liye** hota hai.
+- Iska use **current URL ke baare me information lene aur usko change karne ke liye** hota hai.
 
 **Example:**
 ```js
