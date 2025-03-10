@@ -385,6 +385,8 @@ Jab browser ek HTML document ko render karta hai, tab yeh ek **object-based stru
 
 ![graphical representation of DOM text](dom.png)
 
+<img src="dom.png" alt="graphical representation of DOM text" width="500" height="300">
+
 ### DOM Manipulation Example:
 Hum JavaScript ka use karke DOM elements ko dynamically modify kar sakte hain.
 
